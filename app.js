@@ -33,7 +33,7 @@ function nowch(){
 var myv;
 // let myvar = setInterval(nowch,200)
 function autnowch(){
-   myv = setInterval(nowch,200);
+   myv = setInterval(nowch,500);
 }
 
 function stopnowch(){
