@@ -11,6 +11,7 @@
 // }
 
 // btn.addEventListener("click", nowch);
+alert("Dont click on the auto-change button twice in a row, ELSE YOU WONT BE ABLE TO STOP THE AUTO COLOR CHANGE. Well if that happens just reload the page")
 
 let color = ["A","B","C","D","E","F","0","1","2","3","4","5","6","7","8","9"];
 let mycolor = document.getElementById("colorid");
