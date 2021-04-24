@@ -20,6 +20,7 @@ let autbtn = document.getElementById("autbtn");
 let stopbtn = document.getElementById("stopbtn");
 
 
+
 function nowch(){
     
     let hexcolor = "#"
@@ -31,18 +32,35 @@ function nowch(){
     document.body.style.backgroundColor = hexcolor
     mycolor.innerHTML = hexcolor;
 }
-var myv;
-// let myvar = setInterval(nowch,200)
-function autnowch(){
-   myv = setInterval(nowch,500);
+var rr
+var my = false;
+
+function on(){
+    if (my == true){
+        console.log(1);
+        clearInterval(rr)
+        my = true;
+        rr=setInterval(nowch,1000);
+    }
+    else{
+        rr=setInterval(nowch,1000);
+        console.log(2)
+        my = true;
+        console.log(my)
+    }
 }
 
+// let myvar = setInterval(nowch,200)
+// function autnowch(){
+//    myv = setInterval(nowch,500);
+// }
+
 function stopnowch(){
-    clearInterval(myv);
+    clearInterval(rr);
     console.log("fish")
 }
 
 manbtn.addEventListener("click", nowch);
-autbtn.addEventListener("click", autnowch);
+autbtn.addEventListener("click", on);
 stopbtn.addEventListener("click", stopnowch);
 // setInterval(nowch,3000)
